@@ -1,5 +1,5 @@
 # leetcode-and-algorithms
-> binary search 二分搜索和变种
+> binary search 二分搜索和变种<br>
 > None<br>
 > None<br>
 > None<br>
