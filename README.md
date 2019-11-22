@@ -1,9 +1,9 @@
 # leetcode-and-algorithms
-> binary search 二分搜索和变种<br>
+> <a href="#head1">binary search 二分搜索和变种</a><br>
 > None<br>
 > None<br>
 > None<br>
-## Binary Search 二分搜索和变种
+## <a id = "head1">Binary Search 二分搜索和变种</a>
 ### 变种1：find the index of the `closet` number to target in a list<br>
 仅仅需要在Binary Search里做几个改变<br> 
 1. 提前停止，在left + 1 == right 的时候停止
