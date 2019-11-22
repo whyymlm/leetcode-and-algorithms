@@ -54,3 +54,6 @@ class Solution:
             result[1] = -1
         return result
 ```
+### 变种3 ： how to find k elements that is closest to the target number
+step 1. Binary search to find the closest number
+step 2. 中心开花 双指针向左右找
