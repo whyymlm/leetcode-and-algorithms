@@ -11,7 +11,7 @@
 3. 当nums[middle] > target: right = middle(同理)
 4. 对left和right两个值对比较
 ### 变种2： find the index of the leftmost int whose value is equal to the target 
-`提前停止，它有很多好处，可以保证不会死循环的问题`<br>
+`提前停止，它有很多好处，可以保证不会死循环的问题`, 当num[middle] == target时，right = middle<br>
 ```
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
@@ -33,4 +33,24 @@ class Solution:
             result[0] = right
         else:
             result[0] = -1
+```
+### 变种3： find the index of the rightmost ...
+`提前停止，它有很多好处，可以保证不会死循环的问题`, 当num[middle] == target时，left = middle<br>
+```
+        left, right = 0, len(nums) - 1
+        while left < right - 1:#提前停止，可以保证不会死循环
+            middle = (left + right) // 2
+            if nums[middle] == target:
+                left = middle
+            elif nums[middle] < target:
+                left = middle + 1
+            else:
+                right = middle - 1
+        if nums[right] == target:
+            result[1] = right
+        elif nums[left] == target:
+            result[1] = left
+        else:
+            result[1] = -1
+        return result
 ```
