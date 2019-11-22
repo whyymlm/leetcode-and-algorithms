@@ -1,5 +1,5 @@
 # leetcode-and-algorithms
-> <a href="#head1">binary search 二分搜索和变种</a><br>
+> <a href="#head1">Binary Search 二分搜索和变种</a><br>
 > None<br>
 > None<br>
 > None<br>
