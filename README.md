@@ -1,6 +1,6 @@
 # leetcode-and-algorithms
 > <a href="#head1">Binary Search 二分搜索和变种</a><br>
-> None<br>
+> <a href="#head2">Queue, Stack and LinkedList</a><br>
 > None<br>
 > None<br>
 ## <a id = "head1">Binary Search 二分搜索和变种</a>
@@ -59,5 +59,11 @@ step 1. Binary search to find the closest number<br>
 step 2. 中心开花 双指针向左右找<br>
 `Follow up: 能不能left + 7 = right时停止？`<br>
 No!!!: 1, 2, 3, 4, `5, 20, 21, 22, 23`
-
+## <a id = "head2">Queue, stack and LinkedList</a><br>
+### Using 2 stacks to realize a queue<br>
+Stack1:1,2,3,4,5<br>
+Stack2:<br>
+Queue push: 直接push到stack1(To buffer all the elements)
+Queue pop: 1. 如果Stack2 is empty, push all elements from stack1 to stack2, then pop top of stack2
+2.如果stack2 is not empty, pop top of stack 2
 
