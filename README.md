@@ -63,7 +63,9 @@ No!!!: 1, 2, 3, 4, `5, 20, 21, 22, 23`
 ### Using 2 stacks to realize a queue<br>
 Stack1:1,2,3,4,5<br>
 Stack2:<br>
-Queue push: 直接push到stack1(To buffer all the elements)
-Queue pop: 1. 如果Stack2 is empty, push all elements from stack1 to stack2, then pop top of stack2
-2.如果stack2 is not empty, pop top of stack 2
+Queue push: 直接push到stack1(To buffer all the elements)<br>
+Queue pop: 1. 如果stack2 is empty, push all elements from stack1 to stack2, then pop top of stack2<br>
+2.if stack2 is not empty, pop top of stack 2<br>
+`the complexity of push()`: O(1)<br>
+`the complexity of pop()`: n(pop all elements from stack1) + n(push all elements to stack2) + 1(pop top)<br>
 
