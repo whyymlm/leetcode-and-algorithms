@@ -67,5 +67,11 @@ Queue push: 直接push到stack1(To buffer all the elements)<br>
 Queue pop: 1. 如果stack2 is empty, push all elements from stack1 to stack2, then pop top of stack2<br>
 2.if stack2 is not empty, pop top of stack 2<br>
 `the complexity of push()`: O(1)<br>
-`the complexity of pop()`: n(pop all elements from stack1) + n(push all elements to stack2) + 1(pop top)<br>
+`the complexity of pop()`:<br> 
+1st element pop: n(pop all elements from stack1) + n(push all elements to stack2) + 1(pop top)<br>
+2ed element pop: 1<br>
+3rd element pop: 1<br>
+...<br>
+nth element pop: 1<br>
+`amertized complexity is 3n / n = 3 = O(1)`
 
