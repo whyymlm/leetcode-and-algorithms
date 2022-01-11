@@ -1,4 +1,6 @@
 # leetcode-and-algorithms
+
+-> 递归函数的空间复杂度： 递归层数 * 每层需要的空间 （因为每层都需要压栈存储local variables 和 地址）
 > <a href="#head1">Binary Search 二分搜索和变种</a><br>
 > <a href="#head2">Queue, Stack and LinkedList</a><br>
 > None<br>
