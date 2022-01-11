@@ -1,6 +1,8 @@
 # leetcode-and-algorithms
 
--> 递归函数的空间复杂度： 递归层数 * 每层需要的空间 （因为每层都需要压栈存储local variables 和 地址）
+
+-> 递归函数的空间复杂度： 递归层数 * 每层需要的空间 （因为每层都需要压栈存储local variables 和 地址） 
+
 > <a href="#head1">Binary Search 二分搜索和变种</a><br>
 > <a href="#head2">Queue, Stack and LinkedList</a><br>
 > None<br>
@@ -75,5 +77,9 @@ Queue pop: 1. 如果stack2 is empty, push all elements from stack1 to stack2, th
 3rd element pop: 1<br>
 ...<br>
 nth element pop: 1<br>
-`amertized complexity is 3n / n = 3 = O(1)`
+`amertized complexity is 3n / n = 3 = O(1)`  
+<br>
+## cheatsheet  
+-> Binary Search: 双指针，while循环，每次减少一半， 时间复杂度O(n), 空间复杂度O(1)
+
 
