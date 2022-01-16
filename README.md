@@ -102,8 +102,23 @@ nth element pop: 1<br>
     1. What is balanced BT? Each node, (the deepth of left child) - (deepth of right child) <= 1
     2. What is complete BT? 除了最后一层，其他都满。 最后一层往左边挤
     3. What is binary search tree: 每一个节点，左子树的值都小于当前节点，右子树的值都大于当前节点
-    -> 如何求一个递归函数里面调用另一个递归函数 的 时间复杂度？？？   画递归树！！！
+    -> 如何求一个递归函数里面调用另一个递归函数 的 时间复杂度？？？   画递归树！！！逐层累加
     ![image](https://user-images.githubusercontent.com/25994245/149644924-d3be75a0-5bc3-4a60-a251-90418291a981.png)
+    4. 判断是否是balanced tree？
+    5.  判断一个树是不是中心轴对称
+    ![image](https://user-images.githubusercontent.com/25994245/149645082-4781cbcf-633f-43cb-b66d-dbfe67cd5e2e.png)
+    
+    def is_symmetric(left, right):
+    if not left and not right:
+        return True
+
+    if left and right and left.val == right.val:
+        return is_symmetric(left.left, right.right) and is_symmetric(left.right, right.left)
+        
+    时间复杂度 o(n/2)
+    空间复杂度 o(n/2) if it is balanced o(log(n))
+    
+    
 
 
 ## cheatsheet  
