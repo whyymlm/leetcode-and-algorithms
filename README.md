@@ -93,6 +93,18 @@ nth element pop: 1<br>
     两个stack各存一半，然后用另一个stack来倒腾
 
 ## LinkedList
+    reverse linkedlist
+    merge linkedlist
+    linkedlist has circle
+    find mid of linkedlist
+
+## Binary Tree
+    1. What is balanced BT? Each node, (the deepth of left child) - (deepth of right child) <= 1
+    2. What is complete BT? 除了最后一层，其他都满。 最后一层往左边挤
+    3. What is binary search tree: 每一个节点，左子树的值都小于当前节点，右子树的值都大于当前节点
+    -> 如何求一个递归函数里面调用另一个递归函数 的 时间复杂度？？？   画递归树！！！
+    ![image](https://user-images.githubusercontent.com/25994245/149644924-d3be75a0-5bc3-4a60-a251-90418291a981.png)
+
 
 ## cheatsheet  
 -> Binary Search: 双指针，while循环，每次减少一半， 时间复杂度O(n), 空间复杂度O(1)
