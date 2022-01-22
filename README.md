@@ -117,12 +117,55 @@ nth element pop: 1<br>
         
     时间复杂度 o(n/2)
     空间复杂度 o(n/2) if it is balanced o(log(n))
+## Heap
+    存在一个list里， 从第一个元素开始计数： 
+        左子树 = 2 * i; 右子树= 2* i + 1; parent = i // 2;
+    总是一颗完全树
+    1. insert: log(n) insert at tail and 上浮.
+    2. delete: log(n) 删除堆顶，然后讲最后一个元素放入root，然后下浮
+    3. update: log(n) 上浮 或 下浮
+    4. heapify: log(n)
+    
+    Example: Fing the smallest k numbers from an unsorted array of size n:
+        1. sort 
+        2. use minheap: build a min-heap, keep popping k elements
+        3. use maxheap: build a max-heap of size k, then compare n-k elements 
+        4. quick select O(n)  : n + n/2 + n /4 + n /8 + .... worst case o(n** 2)
+    
+## Graph
+    1. Adjacent matrix: 不sparse, waste too much space
+![image](https://user-images.githubusercontent.com/25994245/150649672-e94f7638-0372-42f6-80d4-8b6c7cac035d.png)
+    2. Adjacent list: save space, waste time
+    3. Use a hashtable: 
+    {v0:{v2:distance, v3: distance}}
+
+### BFS（BFS-1）:找所有点的最短距离
+    1. 分成打印tree
+    2. Bipartite
+![image](https://user-images.githubusercontent.com/25994245/150650875-39b612c6-3102-4d41-8ee6-c86ce45f8313.png)
+    对每一个没有遇到过的点进行bfs, 第一层把 1 放入 u， 然后把 它的下一层放入 v, 然后 expand 2, 准备把1， 3 放入u,发现 3 已经在v里了，所以不能bipartite.
+    3. Determine whether a binary tree is a complete binary tree? 
+        不能的情况是： 当一个node已经不能generate两个孩子了，那之后的node都不能有孩子！！！
+    4. 如果需要讨论同一层的逻辑关系， 用bfs.
+    
+### Dijikstra(BFS-2): 
+    1. Usage: Find the shortest path cost from a single node to any other nodes in a graph.
+    2. Data structure: `min_heap`
+    3.1: init state(start node)
+    3.2: Generation Rule
+    3.3: Termination condition
+     -》 每次弹出最小distance的边
+     -》 每次expand的时候更新dis[vk]
+    3.4: `All the cost of nodes that are expanded are monolically increasing.`
+    3.5: O(nlogn)
+    3.6: if a node is poped, then the value is fixed.
+![image](https://user-images.githubusercontent.com/25994245/150651784-074e5905-87ad-49f0-8d2c-5cc5c3680d8e.png)
+    思路： 一层一层的筛选， 每层从小到大的访问
+
     
     
-
-
 ## cheatsheet  
 -> Binary Search: 双指针，while循环，每次减少一半， 时间复杂度O(n), 空间复杂度O(1)
-->
+
 
 
