@@ -161,8 +161,24 @@ nth element pop: 1<br>
     3.6: if a node is poped, then the value is fixed.
 ![image](https://user-images.githubusercontent.com/25994245/150651784-074e5905-87ad-49f0-8d2c-5cc5c3680d8e.png)
     思路： 一层一层的筛选， 每层从小到大的访问
+## DFS
+Recall "Using pre-order to traverse tree"
+`Back-tracking is just a behavior` same thing
+为什么permutation问题不用bfs，因为FIFO的queue空间不够
+###基本方法：每层代表什么意义，每层有多少个状态要try
+1. print all the subset of a set S= {"a". "b", "c"}
 
-    
+2. find all the valid permutation using the parenthesis provided ()()()
+
+3. print all combinations of coins that can sum up to a total value k.  eg: coins: 1, 2, 15, 25. target:99
+    3.1: solution1 99 层， 每一层考虑四个硬币， 复杂度 4 ** 99
+    3.2: solution2 4 层， 每层考虑加多少个对应的硬币
+![image](https://user-images.githubusercontent.com/25994245/150658368-77f6bb12-4fa1-42c4-8bd1-51eff55e1ab2.png)
+4. list all the permutations of list.
+    trick: 
+![image](https://user-images.githubusercontent.com/25994245/150660985-9b8db4a4-3272-409a-991d-0d1a23b341b4.png)
+    通过i 与 ii的位置来避免list的remove和insert操作
+
     
 ## cheatsheet  
 -> Binary Search: 双指针，while循环，每次减少一半， 时间复杂度O(n), 空间复杂度O(1)
