@@ -133,20 +133,21 @@ nth element pop: 1<br>
         4. quick select O(n)  : n + n/2 + n /4 + n /8 + .... worst case o(n** 2)
     
 ## Graph
-    1. Adjacent matrix: 不sparse, waste too much space
+    1. Adjacent matrix: 不sparse, waste too much space.  
 ![image](https://user-images.githubusercontent.com/25994245/150649672-e94f7638-0372-42f6-80d4-8b6c7cac035d.png)
-    2. Adjacent list: save space, waste time
+    2. Adjacent list: save space, waste time.  
     3. Use a hashtable: 
     {v0:{v2:distance, v3: distance}}
 
 ### BFS（BFS-1）:找所有点的最短距离
-    1. 分成打印tree
-    2. Bipartite
+    1. 分层打印tree.  
+    2. Bipartite.  
 ![image](https://user-images.githubusercontent.com/25994245/150650875-39b612c6-3102-4d41-8ee6-c86ce45f8313.png)
-    对每一个没有遇到过的点进行bfs, 第一层把 1 放入 u， 然后把 它的下一层放入 v, 然后 expand 2, 准备把1， 3 放入u,发现 3 已经在v里了，所以不能bipartite.
-    3. Determine whether a binary tree is a complete binary tree? 
-        不能的情况是： 当一个node已经不能generate两个孩子了，那之后的node都不能有孩子！！！
-    4. 如果需要讨论同一层的逻辑关系， 用bfs.
+    
+    对每一个没有遇到过的点进行bfs, 第一层把 1 放入 u， 然后把 它的下一层放入 v, 然后 expand 2, 准备把1， 3 放入u,发现 3 已经在v里了，所以不能bipartite.    
+    3. Determine whether a binary tree is a complete binary tree?   
+        不能的情况是： 当一个node已经不能generate两个孩子了，那之后的node都不能有孩子！！！ 
+    4. 如果需要讨论同一层的逻辑关系， 用bfs.  
     
 ### Dijikstra(BFS-2): 
     1. Usage: Find the shortest path cost from a single node to any other nodes in a graph.
@@ -155,7 +156,9 @@ nth element pop: 1<br>
     3.2: Generation Rule
     3.3: Termination condition
      -》 每次弹出最小distance的边
-     -》 每次expand的时候更新dis[vk]
+     -》 弹出后更新`它能到达`的点的距离dis[]
+     -》 将还没有visit过的点入heap
+     -》 直到栈空
     3.4: `All the cost of nodes that are expanded are monolically increasing.`
     3.5: O(nlogn)
     3.6: if a node is poped, then the value is fixed.
