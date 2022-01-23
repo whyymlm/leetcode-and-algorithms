@@ -165,10 +165,10 @@ nth element pop: 1<br>
 ![image](https://user-images.githubusercontent.com/25994245/150651784-074e5905-87ad-49f0-8d2c-5cc5c3680d8e.png)
     思路： 一层一层的筛选， 每层从小到大的访问
 ## DFS
-Recall "Using pre-order to traverse tree"
-`Back-tracking is just a behavior` same thing
-为什么permutation问题不用bfs，因为FIFO的queue空间不够
-###基本方法：每层代表什么意义，每层有多少个状态要try
+Recall "Using pre-order to traverse tree"  
+`Back-tracking is just a behavior` same thing  
+为什么permutation问题不用bfs，因为FIFO的queue空间不够  
+###基本方法：每层代表什么意义，每层有多少个状态要try  
 1. print all the subset of a set S= {"a". "b", "c"}
 
 2. find all the valid permutation using the parenthesis provided ()()()
