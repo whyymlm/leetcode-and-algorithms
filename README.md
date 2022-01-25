@@ -182,7 +182,28 @@ Recall "Using pre-order to traverse tree"
 ![image](https://user-images.githubusercontent.com/25994245/150660985-9b8db4a4-3272-409a-991d-0d1a23b341b4.png)
     通过i 与 ii的位置来避免list的remove和insert操作
 
-    
+## Hash table
+    Q1: If there are one missing number from 1 to n in an unsorted array. How to find it in O(n) time?
+    XOR bit operation 
+![image](https://user-images.githubusercontent.com/25994245/150903265-92883de2-af2d-4032-8024-2a351fae46a6.png)
+
+## String
+ASCII编码 英文编码
+unicode 所有国家文字编码
+    Q1: char removal: 删除特定char，如何只用O(1)复杂度：(两个挡板，三个区域)
+![image](https://user-images.githubusercontent.com/25994245/150904693-14b275a8-a2a5-4df0-9279-5e203b00aae7.png)
+    Q2: Remove all leading and duplicate empty spaces from an input string:
+    "___abc__ed__ef__" -> "abc_ed_ef"<br>
+    Q3:Char De_duplication
+![image](https://user-images.githubusercontent.com/25994245/150906652-1bccedb8-0a2f-47ad-b046-a163a6005225.png)
+     fast 和 slow比较是否相等  
+    Q4:  char de-duplication adjaccent letters repeatedly) abbbbbaz -> aaz-> z  O(n):
+     use a stack: while ptr[j] == stack[-1], stack.pop(), stack.push 然后额外pop一次
+![image](https://user-images.githubusercontent.com/25994245/150908075-c184db33-47ed-487d-bb90-d920654c2750.png)
+    Q5: Sub-string finding 暴力一个一个对比：o(m * n) Rabin-karp: idea: If we can have an efficient hash function that can use O(1) to get a hash of a substring, we can use O(n) time to finish the compare: The hash function must be based on current hash and next value.
+![image](https://user-images.githubusercontent.com/25994245/150917304-212884f4-514e-465b-b2ea-a3b1adb493b1.png)
+
+      
 ## cheatsheet  
 -> Binary Search: 双指针，while循环，每次减少一半， 时间复杂度O(n), 空间复杂度O(1)
 
