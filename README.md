@@ -103,7 +103,7 @@ nth element pop: 1<br>
     2. What is complete BT? 除了最后一层，其他都满。 最后一层往左边挤
     3. What is binary search tree: 每一个节点，左子树的值都小于当前节点，右子树的值都大于当前节点
     -> 如何求一个递归函数里面调用另一个递归函数 的 时间复杂度？？？   画递归树！！！逐层累加
-    ![image](https://user-images.githubusercontent.com/25994245/149644924-d3be75a0-5bc3-4a60-a251-90418291a981.png)
+![image](https://user-images.githubusercontent.com/25994245/149644924-d3be75a0-5bc3-4a60-a251-90418291a981.png)
     4. 判断是否是balanced tree？
     5.  判断一个树是不是中心轴对称
     ![image](https://user-images.githubusercontent.com/25994245/149645082-4781cbcf-633f-43cb-b66d-dbfe67cd5e2e.png)
@@ -117,14 +117,14 @@ nth element pop: 1<br>
         
     时间复杂度 o(n/2)
     空间复杂度 o(n/2) if it is balanced o(log(n))
-## Heap
+## Heap(priority queue)
     存在一个list里， 从第一个元素开始计数： 
         左子树 = 2 * i; 右子树= 2* i + 1; parent = i // 2;
     总是一颗完全树
     1. insert: log(n) insert at tail and 上浮.
-    2. delete: log(n) 删除堆顶，然后讲最后一个元素放入root，然后下浮
+    2. delete: log(n) 删除堆顶，然后讲最后一个元素放入root，然后下浮(和小的换)
     3. update: log(n) 上浮 或 下浮
-    4. heapify: log(n)
+    4. heapify: o(n)
     
     Example: Fing the smallest k numbers from an unsorted array of size n:
         1. sort 
