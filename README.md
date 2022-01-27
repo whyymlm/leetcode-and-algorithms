@@ -220,6 +220,15 @@ unicode 所有国家文字编码
     For each level, same word cannot to picked twice. Use memo
     Q3: String En/Decoding "aaaaaabccaaaaa" -> "a4b1c2a5"  Restriction: in-place
     类似于string replacement, 先resize，然后从右往左快慢指针。
+    Q4: Longest substring that contains only unique char. Given a string, return the length of the longest substring without duplicate charactrers. "BDEFGADE" is "BDEFGA"
+    (follow up: without duplicate k times)
+    双指针 + hashmap
+    Q5: Find all anagrams of a substring s2 in a long string s1:   s2 = "aabc" s1="zzz cdeb caab cyw" 找同行异构体:
+    还是sliding window和hash.
+    Q6: Given a 0-1 array, you can flip at most k 0 to 1, find the longest subarray that consists of all 1s:
+    010101010100000000
+    Solution: find a sliding window that contains 4 zeros
+    
 ## cheatsheet  
 -> Binary Search: 双指针，while循环，每次减少一半， 时间复杂度O(n), 空间复杂度O(1)
 
