@@ -202,8 +202,24 @@ unicode 所有国家文字编码
 ![image](https://user-images.githubusercontent.com/25994245/150908075-c184db33-47ed-487d-bb90-d920654c2750.png)
     Q5: Sub-string finding 暴力一个一个对比：o(m * n) Rabin-karp: idea: If we can have an efficient hash function that can use O(1) to get a hash of a substring, we can use O(n) time to finish the compare: The hash function must be based on current hash and next value.
 ![image](https://user-images.githubusercontent.com/25994245/150917304-212884f4-514e-465b-b2ea-a3b1adb493b1.png)
+    Q6: String reversal  
+        I love yahoo -> yahoo love I  
+        Primitive way: 根据空格区分，然后反向组合 CONS:不是in-place，需要o（n）额外空间
+        solution2: step1: reverse each word. step2: reverse each sentense. Pros: inplace reverse.
+    Q7: ab | cdef -> ef | abcd shift 2 chars to the right: ( love yahoo 变种)
+    Q8: string replace   predentdent dent -> en
+        快慢指针， 如果size是增加，则从右往左看
 
-      
+## String advanced topic:
+    Q1: String shuffling: "A1B2C3D4" -> "ABCD1234" merge sort, 自定义比较  
+    follow up:  "ABCD1234" -> "A1B2C3D4"
+![image](https://user-images.githubusercontent.com/25994245/151266985-5dc6a7bd-fb8a-4790-97ee-e6034d565cfd.png)
+    也是iloveyahoo的变种
+    Q2: String permutation with duplicate chars: "abbbc".
+![image](https://user-images.githubusercontent.com/25994245/151267584-5aec02b6-1737-4a0f-a297-e82d931ad45d.png)
+    For each level, same word cannot to picked twice. Use memo
+    Q3: String En/Decoding "aaaaaabccaaaaa" -> "a4b1c2a5"  Restriction: in-place
+    类似于string replacement, 先resize，然后从右往左快慢指针。
 ## cheatsheet  
 -> Binary Search: 双指针，while循环，每次减少一半， 时间复杂度O(n), 空间复杂度O(1)
 
