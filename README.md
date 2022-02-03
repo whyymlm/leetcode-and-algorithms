@@ -228,7 +228,11 @@ unicode 所有国家文字编码
     Q6: Given a 0-1 array, you can flip at most k 0 to 1, find the longest subarray that consists of all 1s:  
     010101010100000000  
     Solution: find a sliding window that contains 4 zeros  
-    
+
+## DP DP的核心思想类似于数学归纳法：
+    1. 如何用size = N-1的方法来构建SIZE = N 的solution.
+### DP的常用解题方法: 一维的data，求max or min
+
 ## cheatsheet  
 -> Binary Search: 双指针，while循环，每次减少一半， 时间复杂度O(n), 空间复杂度O(1)
 
