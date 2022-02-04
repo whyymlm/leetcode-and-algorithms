@@ -232,6 +232,12 @@ unicode 所有国家文字编码
 ## DP DP的核心思想类似于数学归纳法：
     1. 如何用size = N-1的方法来构建SIZE = N 的solution.
 ### DP的常用解题方法: 一维的data，求max or min
+    Q1: cut ropes with maximum product.  
+    solution1:   
+![image](https://user-images.githubusercontent.com/25994245/152440338-e59fd1e9-8df7-4586-8532-4b427464893b.png)
+    solution2: 左大段， 右小段 is more preferrable to solve a problem. 大段的意思是， 我们需要通过读取表格，获得dp[left]的值，小段的意思是，我们不需要读表格，给是不做任何cut，自成一段。
+![image](https://user-images.githubusercontent.com/25994245/152442512-f292b4c9-ae07-4bb7-a92f-590ebacc4da5.png)
+    solution3: Non-dp recursion
 
 ## cheatsheet  
 -> Binary Search: 双指针，while循环，每次减少一半， 时间复杂度O(n), 空间复杂度O(1)
