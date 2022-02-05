@@ -238,7 +238,25 @@ unicode 所有国家文字编码
     solution2: 左大段， 右小段 is more preferrable to solve a problem. 大段的意思是， 我们需要通过读取表格，获得dp[left]的值，小段的意思是，我们不需要读表格，给是不做任何cut，自成一段。
 ![image](https://user-images.githubusercontent.com/25994245/152442512-f292b4c9-ae07-4bb7-a92f-590ebacc4da5.png)
     solution3: Non-dp recursion
+    Q2: Given a word, can it be composed by concatenating words from a given dictionary? Example: bob, cat, rob?
+    `我一开始的想法： 对一个bcoabt, 再所有可能的地方切一刀，然后看左大段和右大段是否可以被组成， dp[i][j] = dp[i][k] && dp[k+1][j] 但是这样就需要对进行二维dp，需要的存储空间更大。`
+    ###套用`左大段右小段`， 每次切一刀，看左边是否存在dp[k]中，看右边是否存在dict中，这样只需要一维的存储空间。 证明完备性： 假如一个string可以被组成，那它必定由一个s放在最右边,左边的由剩下的s组成。
+    dp[n]: if first substring with length n can be composed.
+    bobb = dp[1] && str[2,n] || dp[2] && str[3, n] || dp[3]
+    
+    Q3: Edit Distance
+![image](https://user-images.githubusercontent.com/25994245/152627371-71eeaa12-8d32-4b57-9e28-3213592a5c7f.png)
 
+    solution1: 递归：
+![image](https://user-images.githubusercontent.com/25994245/152627379-b49a5c01-06db-4d50-994f-11e58f65f275.png)
+
+    solution2: 讲递归改成dp:
+![image](https://user-images.githubusercontent.com/25994245/152627570-0d065fed-a2e5-42c6-8fe9-dc9b100a7394.png)
+
+    
+
+
+    
 ## cheatsheet  
 -> Binary Search: 双指针，while循环，每次减少一半， 时间复杂度O(n), 空间复杂度O(1)
 
